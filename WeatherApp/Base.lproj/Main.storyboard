@@ -88,7 +88,7 @@
                     <navigationItem key="navigationItem" title="Weather" id="Taf-ik-JgK">
                         <barButtonItem key="rightBarButtonItem" title="Change Location" id="1RK-AH-zAV">
                             <connections>
-                                <segue destination="UbG-bw-57D" kind="show" id="o9x-0o-zGT"/>
+                                <segue destination="UbG-bw-57D" kind="show" identifier="" id="o9x-0o-zGT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -127,9 +127,11 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="B47-5O-4q6" id="Tve-gH-JwA"/>
+                        <segue destination="KeK-Is-f8A" kind="unwind" identifier="unwindSegue" unwindAction="unwindToWeatherVCWithSegue:" id="Gz2-wM-pF1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5C5-TK-c4s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KeK-Is-f8A" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1919" y="87"/>
         </scene>

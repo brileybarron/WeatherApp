@@ -26,7 +26,13 @@ class WeatherVC: UIViewController {
         }
     }
 
+    @IBAction func unwindToWeatherVC (segue: UIStoryboardSegue) {}
     
+    var displayGeocodingData: GeocodingData! {
+        didSet {
+            locationLabel.text = displayGeocodingData.formattedAddress
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
